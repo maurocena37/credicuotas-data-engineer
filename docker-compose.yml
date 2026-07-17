@@ -1,0 +1,10 @@
+services:
+  pipeline:
+    build: .
+    image: credicuotas-de-challenge
+    working_dir: /app
+    volumes:
+      - .:/app
+    # Spark UI (optional, if you enable it in your SparkSession)
+    ports:
+      - "4040:4040"
